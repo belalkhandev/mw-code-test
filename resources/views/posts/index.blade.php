@@ -12,13 +12,13 @@
                                     <input type="text" name="" placeholder="Search" class="form-control">
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="text" name="" class="form-control" placeholder="Select Date">
+                                    <input type="text" name="" class="form-control datepicker" placeholder="Select Date">
                                 </div>
                                 <div class="col-md-3">
                                     <select name="" class="form-control">
                                         <option value="">Select Group</option>
                                         @foreach ($groups as $group)
-                                            <option value="{{ $group->id }}">{{ $group->name }}</option>
+                                            <option value="{{ $group->id }}">{{ $group->type }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -81,5 +81,10 @@
             z-index: 999;
             box-shadow: 0px 0px 0px 2px #fff;
         }
+
+        .filter-box {
+            padding: 0px 0px 15px 15px;
+        }
     </style>
 @endpush
+

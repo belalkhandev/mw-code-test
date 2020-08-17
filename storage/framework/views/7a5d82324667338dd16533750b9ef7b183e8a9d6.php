@@ -11,13 +11,13 @@
                                     <input type="text" name="" placeholder="Search" class="form-control">
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="text" name="" class="form-control" placeholder="Select Date">
+                                    <input type="text" name="" class="form-control datepicker" placeholder="Select Date">
                                 </div>
                                 <div class="col-md-3">
                                     <select name="" class="form-control">
                                         <option value="">Select Group</option>
                                         <?php $__currentLoopData = $groups; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $group): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            <option value="<?php echo e($group->id); ?>"><?php echo e($group->name); ?></option>
+                                            <option value="<?php echo e($group->id); ?>"><?php echo e($group->type); ?></option>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </select>
                                 </div>
@@ -65,6 +65,7 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startPush('header-custom-styles'); ?>
+    <link rel="stylesheet" href="<?php echo e(asset('css/bootstrap-material-datetimepicker.css')); ?>">
     <style>
         .avatar-media a {
             position: relative;
@@ -81,6 +82,12 @@
             z-index: 999;
             box-shadow: 0px 0px 0px 2px #fff;
         }
+
+        .filter-box {
+            padding: 0px 0px 15px 15px;
+        }
     </style>
 <?php $__env->stopPush(); ?>
+
+
 <?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

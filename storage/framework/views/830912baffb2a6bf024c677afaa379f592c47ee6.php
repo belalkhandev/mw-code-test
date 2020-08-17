@@ -334,6 +334,7 @@ if($user_meta['temp_user'] === true){
 <script src="//fast.appcues.com/widget-bundle.js" type="text/javascript"></script>
 
 <script src="<?php echo e(asset('js/app.js')); ?>"></script>
+
 <script>
 
     var hash = window.location.hash;
