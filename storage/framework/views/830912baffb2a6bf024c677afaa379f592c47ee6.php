@@ -8,6 +8,7 @@
     <title><?php echo e(config('app.name', 'Laravel')); ?></title>
     <link rel="stylesheet" type="text/css" href="//fast.appcues.com/widget.css"/>
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet"/>
+    <?php echo $__env->yieldPushContent('header-custom-styles'); ?>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
